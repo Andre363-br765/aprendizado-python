@@ -1,0 +1,47 @@
+# ------------------------
+# Python
+# ------------------------
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# ------------------------
+# Ambiente virtual
+# ------------------------
+venv/
+env/
+.venv/
+.env/
+
+# ------------------------
+# Configurações do editor
+# ------------------------
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# ------------------------
+# Dependências
+# ------------------------
+*.egg-info/
+dist/
+build/
+
+# ------------------------
+# Arquivos de logs
+# ------------------------
+*.log
+
+# ------------------------
+# Arquivos de sistema
+# ------------------------
+.DS_Store
+Thumbs.db
+
+# ------------------------
+# Configurações sensíveis
+# ------------------------
+.env   # variáveis de ambiente (senhas, chaves API, etc.)
