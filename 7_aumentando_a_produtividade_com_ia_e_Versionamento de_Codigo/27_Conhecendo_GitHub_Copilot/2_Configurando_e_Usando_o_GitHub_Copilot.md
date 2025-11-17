@@ -33,4 +33,4 @@ Teste sugestões com `Ctrl+Enter` para ver opções alternativas.
 
 ---
 
-✍️ **Próxima aula:** [_3 - Bases de Prompt Engineering](3_Bases_de_Prompt_Engineering_para_o_GitHub_Copilot.md)
+✍️ **Próxima aula:** [3 - Bases de Prompt Engineering](3_Bases_de_Prompt_Engineering_para_o_GitHub_Copilot.md)
