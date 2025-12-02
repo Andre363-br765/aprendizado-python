@@ -1,233 +1,154 @@
-# 📘 **Aula 2.2 – Operadores de Comparação (Expandida)**
+# 📘 Aula 1.3 – Variáveis e Constantes 📝
 
-> Aprenda a comparar valores em Python usando operadores que retornam **True** ou **False**, essenciais para condições, decisões e lógica de programas.
-
----
-
-## 🧠 **1️⃣ O que são operadores de comparação?**
-
-Operadores de comparação servem para **verificar relações** entre valores.
-Toda comparação retorna apenas **duas opções**:
-
-* `True` → verdadeiro
-* `False` → falso
-
-Esses operadores são a base de estruturas como `if`, `while`, validações e sistemas lógicos.
+> Aprenda a criar, alterar e utilizar **variáveis** e **constantes** em Python, com exemplos práticos e boas práticas de código.
 
 ---
 
-## 📊 **2️⃣ Tabela completa de operadores**
+## 1️⃣ O que são Variáveis?
 
-| Operação       | Símbolo | Exemplo    | Resultado | Descrição                               |
-| -------------- | ------- | ---------- | --------- | --------------------------------------- |
-| Igualdade      | `==`    | `10 == 10` | `True`    | Verifica se dois valores são iguais     |
-| Diferente      | `!=`    | `10 != 5`  | `True`    | Verifica se dois valores são diferentes |
-| Maior que      | `>`     | `10 > 5`   | `True`    | Se o valor da esquerda é maior          |
-| Menor que      | `<`     | `3 < 2`    | `False`   | Se o valor da esquerda é menor          |
-| Maior ou igual | `>=`    | `10 >= 10` | `True`    | Maior ou igual                          |
-| Menor ou igual | `<=`    | `5 <= 7`   | `True`    | Menor ou igual                          |
+Variáveis são **nomes que armazenam valores**.
+Elas podem mudar ao longo da execução do programa.
 
----
-
-## 🧪 **3️⃣ Exemplos básicos**
+### Exemplos:
 
 ```python
-x = 10
-y = 5
-
-print("x == y:", x == y)
-print("x != y:", x != y)
-print("x > y:", x > y)
-print("x < y:", x < y)
-print("x >= y:", x >= y)
-print("x <= y:", x <= y)
+nome = "Ana"          # String
+idade = 20            # Inteiro
+altura = 1.65         # Float
+ligado = True         # Booleano
+saldo = 1500.50       # Float
+ativo = False         # Booleano
 ```
 
-🔎 Saída:
+Exibindo valores:
 
+```python
+print("Nome:", nome)
+print("Idade:", idade)
+print("Altura:", altura)
+print("Ligado?", ligado)
+print("Saldo:", saldo)
+print("Ativo?", ativo)
 ```
-x == y: False
-x != y: True
-x > y: True
-x < y: False
-x >= y: True
-x <= y: False
+
+> 💡 Use `print("-" * 30)` para criar divisores no terminal.
+
+---
+
+## 2️⃣ Alterando valores de variáveis
+
+Variáveis podem ser modificadas livremente:
+
+```python
+idade = 21
+nome = "Leo"
+
+print("Após alteração -> Nome:", nome, "| Idade:", idade)
 ```
 
 ---
 
-## 🔍 **4️⃣ Comparação funciona com…**
+## 3️⃣ Variáveis que guardam listas
 
-### ✔️ Números
-
-```python
-print(20 > 10)  # True
-```
-
-### ✔️ Strings (ordem alfabética – comparação lexicográfica)
+Listas permitem armazenar **múltiplos valores**:
 
 ```python
-print("Ana" == "Ana")   # True
-print("ana" == "Ana")   # False (case-sensitive)
-print("bola" > "abacate")  # True → b vem depois de a
-```
+limite_saque = 1000
+BRAZILIAN_STATES = ["RS", "SP", "RJ", "SC"]  # Constante por convenção
 
-### ✔️ Booleanos
-
-`True` → vale como `1`
-`False` → vale como `0`
-
-```python
-print(True > False)  # True (1 > 0)
+print("Estados brasileiros:", BRAZILIAN_STATES)
 ```
 
 ---
 
-## ⚠️ **5️⃣ Comparações inválidas**
+## 4️⃣ Operações com variáveis
 
-Python **não permite** comparar tipos totalmente diferentes:
-
-```python
-# print(10 > "10")   # ❌ Erro: TypeError
-```
-
-Sempre mantenha tipos coerentes antes de comparar.
-
----
-
-## 🧬 **6️⃣ Comparação encadeada (recurso exclusivo do Python)**
-
-Python permite comparar valores como na matemática:
+Python permite operações matemáticas e lógicas entre variáveis:
 
 ```python
-print(5 < 10 < 20)   # True
-print(5 < 10 > 3)    # True
-```
-
-Equivalente a:
-
-```python
-print(5 < 10 and 10 < 20)
-```
-
-💡 Muito útil em validações:
-
-```python
-idade = 17
-print(13 <= idade <= 19)  # Verifica "adolescente"
+total = saldo + limite_saque
+print("Total disponível:", total)
 ```
 
 ---
 
-## 🧠 **7️⃣ Comparações com floats (atenção à precisão)**
+## 5️⃣ Constantes em Python
+
+Python **não possui constantes verdadeiras**, mas usamos **nomes em MAIÚSCULAS** para indicar que não devem ser alteradas.
 
 ```python
-print(0.1 + 0.2 == 0.3)  # False (imprecisão de ponto flutuante)
-```
+PI = 3.14159
+TAXA = 0.05
+MAX_USUARIOS = 1000
+DIAS_SEMANA = ["Segunda", "Terça", "Quarta", "Quinta", "Sexta", "Sábado", "Domingo"]
 
-Use `round()` se quiser comparar com precisão controlada:
-
-```python
-print(round(0.1 + 0.2, 1) == 0.3)  # True
-```
-
----
-
-## 🧪 **8️⃣ Exemplos práticos**
-
-### ✔️ Verificando idade mínima:
-
-```python
-idade = 18
-print(idade >= 18)  # True
-```
-
-### ✔️ Checando senha:
-
-```python
-senha_digitada = "1234"
-senha_correta = "1234"
-print(senha_digitada == senha_correta)
-```
-
-### ✔️ Comparando notas:
-
-```python
-media = 7.5
-print(media >= 7)   # Aprovado?
+print("PI:", PI)
+print("Taxa:", TAXA)
+print("Máximo de usuários:", MAX_USUARIOS)
+print("Dias da semana:", DIAS_SEMANA)
 ```
 
 ---
 
-## 💡 **9️⃣ Boas práticas**
+## 6️⃣ Boas práticas ao nomear variáveis e constantes
 
-1. **Não use comparação desnecessária com booleanos**
+### ✔ 1. Use nomes descritivos
 
-   ```python
-   if ativo == True:     # ❌ errado
-   if ativo:             # ✔️ certo
-   ```
+```python
+saldo_conta = 1500
+idade_usuario = 21
+```
 
-2. **Use nomes de variáveis que explicam a lógica**
+### ✔ 2. Constantes sempre em MAIÚSCULAS
 
-   ```python
-   idade_usuario >= IDADE_MINIMA
-   ```
+```python
+MAX_ITENS = 50
+```
 
-3. **Cuidado com maiúsculas e minúsculas em strings**
+### ✔ 3. Evite nomes genéricos
 
-   ```python
-   nome.lower() == "joão"
-   ```
+Evite: `x`, `y`, `data`, `valor`
+Prefira: `idade_usuario`, `preco_produto`, `data_cadastro`.
 
-4. **Evite comparar floats diretamente sem arredondar**
+### ✔ 4. Mantenha o tipo consistente
+
+Evite mudar o tipo de uma variável sem motivo:
+
+```python
+saldo = 1500.50
+saldo = "agora é texto"
+```
 
 ---
 
-## 💻 **🔟 Exemplo completo**
+## 7️⃣ Exemplo Completo
 
 ```python
-def exemplos_comparacao():
-    x = 10
-    y = 5
+def exemplos_variaveis():
+    nome = "Ana"
+    idade = 20
+    saldo = 1500.50
 
-    print("x == y:", x == y)
-    print("x != y:", x != y)
-    print("x > y:", x > y)
-    print("x < y:", x < y)
-    print("x >= y:", x >= y)
-    print("x <= y:", x <= y)
+    print("Nome:", nome)
+    print("Idade:", idade)
+    print("Saldo:", saldo)
 
-    # Comparações com strings
-    nome1 = "Ana"
-    nome2 = "ana"
-    print("Nomes iguais?", nome1 == nome2)
+    # Alterando valores
+    nome = "Leo"
+    idade = 21
+    print("Após alteração -> Nome:", nome, "| Idade:", idade)
 
-    # Comparação encadeada
-    idade = 17
-    print("É adolescente?", 13 <= idade <= 19)
+    # Lista e constantes
+    BRAZILIAN_STATES = ["RS", "SP", "RJ", "SC"]
+    PI = 3.14159
 
-    # Comparação com float
-    print("0.1 + 0.2 == 0.3?", 0.1 + 0.2 == 0.3)
-    print("Arredondando:", round(0.1 + 0.2, 1) == 0.3)
-
+    print("Estados:", BRAZILIAN_STATES)
+    print("PI:", PI)
 
 if __name__ == "__main__":
-    exemplos_comparacao()
+    exemplos_variaveis()
 ```
 
 ---
 
-## 🧾 **Resumo rápido**
-
-| Operador | Significado    | Exemplo    | Resultado |
-| -------- | -------------- | ---------- | --------- |
-| `==`     | Igual          | `7 == 7`   | True      |
-| `!=`     | Diferente      | `7 != 5`   | True      |
-| `>`      | Maior          | `10 > 2`   | True      |
-| `<`      | Menor          | `2 < 10`   | True      |
-| `>=`     | Maior ou igual | `10 >= 10` | True      |
-| `<=`     | Menor ou igual | `2 <= 3`   | True      |
-
----
-
+✍️ **Próxima aula:** [1.4 – Conversao_De_Tipos](4_conversao_de_tipos.md)
