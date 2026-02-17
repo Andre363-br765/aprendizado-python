@@ -11,3 +11,5 @@
 - Cada tópico tem seu próprio arquivo Python.
 - Funções organizam os exemplos para execução limpa.
 - Os exemplos de `input()` estão comentados para evitar travar a execução do script.
+
+✍️ **Próxima aula:** [1 — Tipos de Dados Básicos](./1_conhecendo_a_linguagem/1_tipos_de_dados_basicos.md)

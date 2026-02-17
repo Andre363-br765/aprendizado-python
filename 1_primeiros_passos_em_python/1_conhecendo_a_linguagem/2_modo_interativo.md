@@ -126,8 +126,4 @@ if __name__ == "__main__":
 
 ---
 
-✍️ **Próxima aula:** *1.3 – Variáveis e Constantes*
-
----
-
-Se quiser, posso escrever a **Aula 1.3** agora no mesmo padrão. Quer que eu faça?
+✍️ **Próxima aula:** [1.3 – Variáveis e Constantes](./3_variaveis_e_constantes.md)

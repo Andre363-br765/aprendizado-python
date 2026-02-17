@@ -108,4 +108,4 @@ Essas técnicas são essenciais para qualquer programa que lide com **entrada, s
 
 ---
 
-✍️ **Próxima aula:** [5.1 - Listas]()
+✍️ **Próxima aula:** [5.1 - Listas](../../2_aprendendo_estruturas_de_dados_com_python/5_listas/aula_5_listas.py)

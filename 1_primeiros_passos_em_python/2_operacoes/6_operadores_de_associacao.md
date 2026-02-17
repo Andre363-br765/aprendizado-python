@@ -91,4 +91,4 @@ print("marca" in carros)   # True → verifica se existe a CHAVE
 
 ---
 
-✍️ **Próxima aula:** [2.6 - Operadores de associação](../3_estrutura%20condicional/)
+✍️ **Próxima aula:** [2.6 - Operadores de associação](../3_estrutura_condicional/1_Indentação_e_blocos_em_python.md)
