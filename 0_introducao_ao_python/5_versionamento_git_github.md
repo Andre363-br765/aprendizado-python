@@ -200,4 +200,4 @@ Seu ambiente está pronto para trabalhar de maneira profissional!
 
 ---
 
-✍️ **Próxima aula:** [1 — Tipos de Dados Básicos](../1_primeiros_passos_em_python/1_conhecendo_a_linguagem/1_tipos_de_dados_basicos.md)
+✍️ **Próxima aula:** [1 — Conhecendo a Linguagem Python](../1_primeiros_passos_em_python/README.md)
